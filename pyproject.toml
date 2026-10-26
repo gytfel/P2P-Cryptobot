@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "p2p-cryptobot"
+version = "0.1.0"
+description = "Парсер выгодных P2P-сделок CryptoBot с проверкой по реальному рыночному курсу"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.28", "tomli>=2.0; python_version < '3.11'"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+p2p-scanner = "p2p_scanner.cli:main"
+
+[tool.setuptools]
+packages = ["p2p_scanner"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

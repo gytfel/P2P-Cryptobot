@@ -1,0 +1,15 @@
+# Личные данные: в запросе мини-приложения лежит ваша авторизация Telegram
+config.toml
+cryptobot_request.txt
+curl_*.txt
+*.response.json
+
+# Результаты
+deals*.json
+deals*.csv
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/

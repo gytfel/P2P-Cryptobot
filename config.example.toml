@@ -1,0 +1,73 @@
+# Скопируйте в config.toml и поправьте под себя. Все параметры необязательные.
+# Параметры командной строки (--coin, --amount и т.д.) имеют приоритет над этим файлом.
+
+[scan]
+coins = ["USDT"]          # можно несколько: ["USDT", "TON", "BTC"] — нужен {{coin}} в шаблоне запроса
+fiats = ["RUB"]
+sides = ["buy", "sell"]   # buy — я покупаю монету, sell — я продаю
+# amount = 20000          # сумма сделки в фиате: фильтр по лимитам объявлений и расчёт прибыли
+top = 10                  # сколько лучших объявлений показывать на каждую сторону
+# min_profit_pct = 0      # показывать только сделки не хуже рынка
+
+[fees]
+# Комиссии P2P-маркета CryptoBot (help.send.tg → Fees and limits): покупателю 0%, продавцу 1%.
+buy_pct = 0.0
+sell_pct = 1.0
+
+[filters]
+# Самые «выгодные» цены часто у новичков с парой сделок — отсекаем их (0 — без фильтра).
+min_orders = 10           # минимум сделок у мерчанта
+min_completion = 90       # минимальный % успешных сделок
+max_deviation_pct = 30    # цены дальше этого от рынка — мусор/ошибка, отбрасываются
+payment_include = []      # например ["СБП", "Т-Банк"] — подстрока, без учёта регистра
+payment_exclude = []
+exclude_merchants = []
+
+[rates]
+# Реальный курс = медиана(спот монета/USDT) × медиана(USDT/фиат).
+# Источники: binance, bybit, okx, coingecko, rapira, bybit_p2p, cryptopay, cbr
+spot_sources = ["binance", "bybit", "okx", "coingecko"]
+fiat_sources = ["rapira", "coingecko", "bybit_p2p", "cryptopay"]
+# "cbr" — официальный курс ЦБ (USDT ≈ USD), обычно отличается от рынка, поэтому выключен.
+max_spread_pct = 3        # источник дальше от медианы — выброс, не учитывается
+timeout = 10
+# crypto_pay_token = ""   # токен Crypto Pay API (@CryptoBot → Crypto Pay → Create App),
+                          # лучше через переменную окружения CRYPTO_PAY_TOKEN
+
+[cryptobot]
+# Запрос мини-приложения, скопированный из DevTools («Copy as cURL»). См. README.md.
+request_file = "cryptobot_request.txt"
+# Либо отдельные файлы на каждую сторону (тогда {{side}} не нужен):
+# request_files = { buy = "curl_buy.txt", sell = "curl_sell.txt" }
+
+# Что подставлять в {{side}}: посмотрите, что мини-приложение шлёт на вкладках «Купить» и «Продать».
+side_values = { buy = "buy", sell = "sell" }
+
+# Пагинация работает, если в шаблоне есть {{page}} или {{offset}} (и {{limit}}).
+pages = 1
+page_size = 50
+first_page = 1
+timeout = 15
+delay = 0.4               # пауза между страницами, сек
+
+[cryptobot.fields]
+# Если автоопределение полей ошиблось (проверьте: python -m p2p_scanner inspect), задайте dot-пути:
+# list = "data.offers"
+# price = "price.value"
+# min_amount = "orderAmountLimits.min"
+# max_amount = "orderAmountLimits.max"
+# available = "availableVolume"
+# merchant = "user.nickname"
+# orders = "user.statistics.totalOrdersCount"
+# completion = "user.statistics.successRate"
+# payment_methods = "paymentMethods"
+# id = "id"
+
+[telegram]
+# Уведомления о выгодных сделках (--notify). Лучше через TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID.
+# bot_token = ""
+# chat_id = ""
+alert_pct = 0.5           # слать сделки с выгодой от 0.5% к рынку
+
+[watch]
+interval = 60             # период для --watch без числа, сек

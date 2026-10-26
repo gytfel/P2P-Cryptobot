@@ -1,0 +1,202 @@
+{
+  "status": "success",
+  "data": {
+    "offers": [
+      {
+        "id": 101,
+        "type": "SALE",
+        "price": {
+          "type": "FIXED",
+          "value": "96.40"
+        },
+        "orderAmountLimits": {
+          "min": "1000",
+          "max": "150000"
+        },
+        "availableVolume": "2500",
+        "user": {
+          "nickname": "fast_usdt",
+          "statistics": {
+            "totalOrdersCount": 840,
+            "successRate": 0.99
+          }
+        },
+        "paymentMethods": [
+          {
+            "code": "сбп",
+            "name": "СБП"
+          },
+          {
+            "code": "т-банк",
+            "name": "Т-Банк"
+          }
+        ]
+      },
+      {
+        "id": 102,
+        "type": "SALE",
+        "price": {
+          "type": "FIXED",
+          "value": "95.10"
+        },
+        "orderAmountLimits": {
+          "min": "5000",
+          "max": "50000"
+        },
+        "availableVolume": "600",
+        "user": {
+          "nickname": "ivan_p2p",
+          "statistics": {
+            "totalOrdersCount": 312,
+            "successRate": 0.97
+          }
+        },
+        "paymentMethods": [
+          {
+            "code": "сбербанк",
+            "name": "Сбербанк"
+          }
+        ]
+      },
+      {
+        "id": 103,
+        "type": "SALE",
+        "price": {
+          "type": "FIXED",
+          "value": "97.85"
+        },
+        "orderAmountLimits": {
+          "min": "500",
+          "max": "30000"
+        },
+        "availableVolume": "1200",
+        "user": {
+          "nickname": "crypto_mama",
+          "statistics": {
+            "totalOrdersCount": 1540,
+            "successRate": 0.995
+          }
+        },
+        "paymentMethods": [
+          {
+            "code": "сбп",
+            "name": "СБП"
+          }
+        ]
+      },
+      {
+        "id": 104,
+        "type": "SALE",
+        "price": {
+          "type": "FIXED",
+          "value": "94.70"
+        },
+        "orderAmountLimits": {
+          "min": "2000",
+          "max": "20000"
+        },
+        "availableVolume": "150",
+        "user": {
+          "nickname": "newbie42",
+          "statistics": {
+            "totalOrdersCount": 3,
+            "successRate": 0.67
+          }
+        },
+        "paymentMethods": [
+          {
+            "code": "т-банк",
+            "name": "Т-Банк"
+          }
+        ]
+      },
+      {
+        "id": 105,
+        "type": "SALE",
+        "price": {
+          "type": "FIXED",
+          "value": "96.05"
+        },
+        "orderAmountLimits": {
+          "min": "100000",
+          "max": "3000000"
+        },
+        "availableVolume": "50000",
+        "user": {
+          "nickname": "whale_otc",
+          "statistics": {
+            "totalOrdersCount": 2210,
+            "successRate": 0.99
+          }
+        },
+        "paymentMethods": [
+          {
+            "code": "сбп",
+            "name": "СБП"
+          },
+          {
+            "code": "альфа-банк",
+            "name": "Альфа-Банк"
+          }
+        ]
+      },
+      {
+        "id": 106,
+        "type": "SALE",
+        "price": {
+          "type": "FIXED",
+          "value": "98.90"
+        },
+        "orderAmountLimits": {
+          "min": "1000",
+          "max": "80000"
+        },
+        "availableVolume": "900",
+        "user": {
+          "nickname": "night_trader",
+          "statistics": {
+            "totalOrdersCount": 95,
+            "successRate": 0.95
+          }
+        },
+        "paymentMethods": [
+          {
+            "code": "сбербанк",
+            "name": "Сбербанк"
+          },
+          {
+            "code": "сбп",
+            "name": "СБП"
+          }
+        ]
+      },
+      {
+        "id": 107,
+        "type": "SALE",
+        "price": {
+          "type": "FIXED",
+          "value": "9.65"
+        },
+        "orderAmountLimits": {
+          "min": "1000",
+          "max": "10000"
+        },
+        "availableVolume": "100",
+        "user": {
+          "nickname": "typo_price",
+          "statistics": {
+            "totalOrdersCount": 10,
+            "successRate": 0.9
+          }
+        },
+        "paymentMethods": [
+          {
+            "code": "сбп",
+            "name": "СБП"
+          }
+        ]
+      }
+    ],
+    "total": 7
+  }
+}

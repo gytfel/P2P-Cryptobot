@@ -1,0 +1,116 @@
+{
+  "status": "success",
+  "data": {
+    "offers": [
+      {
+        "id": 201,
+        "type": "PURCHASE",
+        "price": {
+          "type": "FIXED",
+          "value": "94.20"
+        },
+        "orderAmountLimits": {
+          "min": "1000",
+          "max": "100000"
+        },
+        "availableVolume": "3000",
+        "user": {
+          "nickname": "buyer_one",
+          "statistics": {
+            "totalOrdersCount": 650,
+            "successRate": 0.98
+          }
+        },
+        "paymentMethods": [
+          {
+            "code": "сбп",
+            "name": "СБП"
+          }
+        ]
+      },
+      {
+        "id": 202,
+        "type": "PURCHASE",
+        "price": {
+          "type": "FIXED",
+          "value": "96.30"
+        },
+        "orderAmountLimits": {
+          "min": "10000",
+          "max": "500000"
+        },
+        "availableVolume": "8000",
+        "user": {
+          "nickname": "rich_buyer",
+          "statistics": {
+            "totalOrdersCount": 410,
+            "successRate": 0.99
+          }
+        },
+        "paymentMethods": [
+          {
+            "code": "т-банк",
+            "name": "Т-Банк"
+          },
+          {
+            "code": "сбп",
+            "name": "СБП"
+          }
+        ]
+      },
+      {
+        "id": 203,
+        "type": "PURCHASE",
+        "price": {
+          "type": "FIXED",
+          "value": "92.80"
+        },
+        "orderAmountLimits": {
+          "min": "500",
+          "max": "20000"
+        },
+        "availableVolume": "500",
+        "user": {
+          "nickname": "slow_buy",
+          "statistics": {
+            "totalOrdersCount": 77,
+            "successRate": 0.93
+          }
+        },
+        "paymentMethods": [
+          {
+            "code": "сбербанк",
+            "name": "Сбербанк"
+          }
+        ]
+      },
+      {
+        "id": 204,
+        "type": "PURCHASE",
+        "price": {
+          "type": "FIXED",
+          "value": "95.40"
+        },
+        "orderAmountLimits": {
+          "min": "3000",
+          "max": "60000"
+        },
+        "availableVolume": "1000",
+        "user": {
+          "nickname": "mid_buyer",
+          "statistics": {
+            "totalOrdersCount": 1200,
+            "successRate": 0.99
+          }
+        },
+        "paymentMethods": [
+          {
+            "code": "альфа-банк",
+            "name": "Альфа-Банк"
+          }
+        ]
+      }
+    ],
+    "total": 4
+  }
+}

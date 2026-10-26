@@ -1,0 +1,5 @@
+curl 'https://ЗАМЕНИТЕ-НА-АДРЕС-ИЗ-DEVTOOLS/...' \
+  -H 'accept: application/json' \
+  -H 'authorization: ЗНАЧЕНИЕ-ИЗ-DEVTOOLS' \
+  -H 'content-type: application/json' \
+  --data-raw '{"side":"{{side}}","asset":"{{coin}}","fiat":"{{fiat}}","offset":{{offset}},"limit":{{limit}}}'
